@@ -207,7 +207,7 @@ const RecommendationResults = ({ filterData }) => {
     loadingRef.current = true;
     setLoading(true);
     try {
-      const response = await axios.post(`http://localhost:8080/api/predictions?page=${page}&size=10`, filterData);
+      const response = await axios.post(`http://43.201.210.68:8080/api/predictions?page=${page}&size=10`, filterData);
       const { content, last } = response.data;
       
       if (content.length === 0) {
